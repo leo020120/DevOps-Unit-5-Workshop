@@ -11,5 +11,17 @@ jobs:
       - name: Build C# code
         run: dotnet build
 
-      - name: Run C# code
-        run: dotnet run
+      - name: Run C# tests
+        run: dotnet test
+
+      - name: switch folder
+        run: cd DotnetTemplate.Web
+
+      - name: build TS code
+        run: npm run build
+
+      - name: run TS linter
+        run: npm run lint
+
+      - name: run TS tests
+        run: npm t
