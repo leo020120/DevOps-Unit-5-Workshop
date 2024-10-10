@@ -14,14 +14,14 @@ jobs:
       - name: Run C# tests
         run: dotnet test
 
-      - name: switch folder
-        run: cd DotnetTemplate.Web
-
       - name: build TS code
+        working-directory: DotnetTemplate.Web
         run: npm run build
 
       - name: run TS linter
+        working-directory: DotnetTemplate.Web
         run: npm run lint
 
       - name: run TS tests
+        working-directory: DotnetTemplate.Web
         run: npm t
