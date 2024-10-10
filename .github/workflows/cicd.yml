@@ -16,7 +16,7 @@ jobs:
 
       - name: build TS code
         working-directory: DotnetTemplate.Web
-        run: npm run build
+        run: npm ci && npm run build
 
       - name: run TS linter
         working-directory: DotnetTemplate.Web
